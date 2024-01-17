@@ -11,7 +11,7 @@ These are setup as three binary classification tasks.
 
 ## Meerkat dataset
 
-![Meerkat reference labels](https://github.com/johnmartinsson/bioacoustics-task/tree/main/examples/meerkat_reference_labels.png)
+![Meerkat reference labels](examples/meerkat_reference_labels.png)
 
 ## Dog dataset
 
