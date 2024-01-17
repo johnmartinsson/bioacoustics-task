@@ -9,16 +9,16 @@ These sound classes vary a bit in characteristic. The Meerkat sounds are consist
 
 These are setup as three binary classification tasks.
 
-The datasets are split into training and test data. The file structure is pairs of audio and annotations (<filename>.wav, <filename>.txt). Only annotations of the event class of interest are provided. E.g., for the Meerkat sounds we provide annotations for all onset and offset Meerkat sounds in <filename>.txt which corresponds to the audio file <filename>.wav. The format is
+The datasets are split into training and test data. The file structure is pairs of audio and annotations (<filename>.wav, <filename>.txt). Only annotations of the event class of interest are provided. E.g, in the meerkat example we have
 
-    <onset_1>  <offset_1>  <event_label_1>
-    <onset_2>  <offset_2>  <event_label_2>
-    .
-    .
-    .
-    <onset_n>  <offset_n>  <event_label_n>
+    9.485452220875999	9.711452220876	me
+    13.941618009893638	14.142618009893638	me
+    25.988057036822894	26.207077870156226	me
 
-for the n events in the audio file. In these datasets n=3, that is, there are always exactly 3 events in each soundscape. However, we could make this more difficult if desired.
+which means that we have 3 events in this file. For all three classes we provide annotations for all onset and offset event sounds in <filename>.txt which corresponds to the audio file <filename>.wav. In these datasets there are exactly 3 events in each soundscape. However, we could make this more difficult if desired by changing the mixing script.
+
+## Goal
+Predict the onset and offset of the events as well as possible.
 
 ## Meerkat dataset
 
@@ -30,9 +30,15 @@ An audio and annotation example is provided in 'examples/meeerkat_soundscape_15.
 
 ![Dog reference labels](examples/dog_reference_labels.png)
 
+An audio and annotation example is provided in 'examples/dog_soundscape_15.txt', and 'examples/dog_soundscape_15.wav'.
+
+
 ## Baby cry dataset
 
 ![Baby reference labels](examples/baby_reference_labels.png)
+
+An audio and annotation example is provided in 'examples/baby_soundscape_15.txt', and 'examples/baby_soundscape_15.wav'.
+
 
 # Data
 The three datasets have been generated using Scaper.
