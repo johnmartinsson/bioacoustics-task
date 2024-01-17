@@ -9,13 +9,30 @@ These sound classes vary a bit in characteristic. The Meerkat sounds are consist
 
 These are setup as three binary classification tasks.
 
+The datasets are split into training and test data. The file structure is pairs of audio and annotations (<filename>.wav, <filename>.txt). Only annotations of the event class of interest are provided. E.g., for the Meerkat sounds we provide annotations for all onset and offset Meerkat sounds in <filename>.txt which corresponds to the audio file <filename>.wav. The format is
+
+    <onset_1>  <offset_1>  <event_label_1>
+    <onset_2>  <offset_2>  <event_label_2>
+    .
+    .
+    .
+    <onset_n>  <offset_n>  <event_label_n>
+
+for the n events in the audio file. In these datasets n=3, that is, there are always exactly 3 events in each soundscape. However, we could make this more difficult if desired.
+
 ## Meerkat dataset
 
 ![Meerkat reference labels](examples/meerkat_reference_labels.png)
 
+An audio and annotation example is provided in 'examples/meeerkat_soundscape_15.txt', and 'examples/meeerkat_soundscape_15.wav'.
+
 ## Dog dataset
 
+![Dog reference labels](examples/dog_reference_labels.png)
+
 ## Baby cry dataset
+
+![Baby reference labels](examples/baby_reference_labels.png)
 
 # Data
 The three datasets have been generated using Scaper.
