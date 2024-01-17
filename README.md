@@ -5,9 +5,7 @@ A description of the bioacoustics task for the advanced audio processing course 
   2. Dog
   3. Baby cry
 
-These sound classes vary a bit in characteristic. The Meerkat sounds are consistently very short, and the baby cries vary more and are longer.
-
-These are setup as three binary classification tasks.
+These sound event classes vary a bit in characteristic. The Meerkat sounds are consistently very short, and the baby cries vary more and are longer.
 
 The datasets are split into training and test data. The file structure is pairs of audio and annotations (<filename>.wav, <filename>.txt). Only annotations of the event class of interest are provided. E.g, in the meerkat example we have
 
@@ -19,6 +17,8 @@ which means that we have 3 events in this file. For all three classes we provide
 
 ## Goal
 Predict the onset and offset of the events as well as possible.
+
+# Examples
 
 ## Meerkat dataset
 
@@ -40,7 +40,7 @@ An audio and annotation example is provided in 'examples/dog_soundscape_15.txt',
 An audio and annotation example is provided in 'examples/baby_soundscape_15.txt', and 'examples/baby_soundscape_15.wav'.
 
 
-# Data
+# Download the data
 The three datasets have been generated using Scaper.
 
 ## Pre-generated datasets
