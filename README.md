@@ -31,14 +31,21 @@ An audio and annotation example is provided in 'examples/meeerkat_soundscape_15.
 ![Dog reference labels](examples/dog_reference_labels.png)
 
 An audio and annotation example is provided in 'examples/dog_soundscape_15.txt', and 'examples/dog_soundscape_15.wav'.
-
-
+    
+    9.485452220875999	10.059171041737677	dog
+    13.941618009893638	14.16835270377119	dog
+    25.988057036822894	26.178510551562123	dog
+    
 ## Baby cry dataset
 
 ![Baby reference labels](examples/baby_reference_labels.png)
 
 An audio and annotation example is provided in 'examples/baby_soundscape_15.txt', and 'examples/baby_soundscape_15.wav'.
 
+
+    13.941618009893638	14.352048848895906	baby
+    22.138530787299455	24.224675912016007	baby
+    25.988057036822894	27.37127699147142	baby
 
 # Download the data
 The three datasets have been generated using Scaper.
