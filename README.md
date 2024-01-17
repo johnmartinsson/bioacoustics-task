@@ -26,6 +26,11 @@ Predict the onset and offset of the events as well as possible.
 
 An audio and annotation example is provided in 'examples/meeerkat_soundscape_15.txt', and 'examples/meeerkat_soundscape_15.wav'.
 
+    9.485452220875999	9.711452220876	me
+    13.941618009893638	14.142618009893638	me
+    25.988057036822894	26.207077870156226	me
+
+
 ## Dog dataset
 
 ![Dog reference labels](examples/dog_reference_labels.png)
