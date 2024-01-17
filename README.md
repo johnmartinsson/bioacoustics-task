@@ -9,6 +9,14 @@ These sound classes vary a bit in characteristic. The Meerkat sounds are consist
 
 These are setup as three binary classification tasks.
 
+## Meerkat dataset
+
+![Meerkat reference labels](http://github.com/johnmartinsson/bioacoustics-task/examples/meerkat_soundscape_15.png)
+
+## Dog dataset
+
+## Baby cry dataset
+
 # Data
 The three datasets have been generated using Scaper.
 
@@ -25,8 +33,4 @@ Dowload the source material: https://www.dropbox.com/scl/fi/ay0w0lb2y2zogjh7779u
   unzip bioacoustics-sources.zip
   python generate_data.py
 
-# Meerkat dataset
 
-# Dog dataset
-
-# Baby cry dataset
