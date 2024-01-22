@@ -13,7 +13,7 @@ The datasets are split into training and test data. The file structure is pairs 
     13.941618009893638	14.142618009893638	me
     25.988057036822894	26.207077870156226	me
 
-which means that we have 3 events in this file. For all three classes we provide annotations for all onset and offset event sounds in <filename>.txt which corresponds to the audio file <filename>.wav. In these datasets there are exactly 3 events in each soundscape. However, we could make this more difficult if desired by generating new datasets using the provided generate_soundscapes.py script.
+which means that we have 3 events in this file. For all three classes we provide annotations for all onset and offset event sounds in <filename>.txt which corresponds to the audio file <filename>.wav. In these datasets there are exactly 3 events in each soundscape without overlap. However, we could make this more difficult if desired by generating new datasets using the provided generate_soundscapes.py script.
 
 ## Goal
 Predict the onset and offset of the events as well as possible.
