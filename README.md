@@ -31,6 +31,12 @@ Students can get the source material and the code used to generate the datasets 
 Dowload the source material: https://www.dropbox.com/scl/fi/ay0w0lb2y2zogjh7779us/bioacoustics-sources.zip?rlkey=sxm8dpp13473a9ewi6vefw22v&dl=0
 
   unzip bioacoustics-sources.zip
-  python generate_data.py
+  python generate_soundscapes.py --dataset_name=$dataset_name --snr=$snr --bg_label=$bg_label --fg_label=$fg_label --n_soundscapes=$n_soundscapes --data_dir=$data_dir
 
+Please see the comments and in the generate_soundscape.py file to understand what it does.
 
+## Generate own source material
+
+I have not fully described this yet, but this is the script used to generate the source material. That is, to extract the background sounds and foreground sounds from other openly available strongly labeled sound event detection datasets.
+
+    python generate_source_material.py --source_output_dir=<output_dir>
