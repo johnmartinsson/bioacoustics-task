@@ -58,14 +58,14 @@ The three datasets have been generated using Scaper.
 ## Pre-generated datasets
 Download using dropbox link: https://www.dropbox.com/scl/fi/28i35xxwlozzpnnmsdy2m/bioacoustics-tasks.zip?rlkey=ff68wyvuy1h1lv12nc3yqew3l&dl=0
   
-  unzip bioacoustics-tasks.zip
+    unzip bioacoustics-tasks.zip
 
 ## Generate own datasets
 Students can get the source material and the code used to generate the datasets if they want to add more variability, change the SNR, or even generate a multi-label classification task.
 
 Dowload the source material: https://www.dropbox.com/scl/fi/ay0w0lb2y2zogjh7779us/bioacoustics-sources.zip?rlkey=sxm8dpp13473a9ewi6vefw22v&dl=0
 
-  unzip bioacoustics-sources.zip
-  python generate_data.py
+    unzip bioacoustics-sources.zip
+    python generate_data.py
 
 
