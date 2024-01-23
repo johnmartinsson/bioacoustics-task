@@ -30,7 +30,7 @@ def has_overlapping_events(annotation_list):
 
 def main():
     parser = argparse.ArgumentParser(description='A data generation script.')
-    parser.add_argument('--data_dir', help='The data dir containing the train and test source directories', required=True, type=str)
+    parser.add_argument('--base_dir', help='The data dir containing the sources train and test source directories', required=True, type=str)
     parser.add_argument('--out_dir', help='The output dir for the generated train and test soundscapes', required=True, type=str)
     parser.add_argument('--dataset_name', help='The name of the generated dataset', required=True, type=str)
     parser.add_argument('--snr', help='The signal-to-noise ratio (in LUFS)', required=True, type=float)
