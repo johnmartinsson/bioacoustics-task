@@ -64,6 +64,12 @@ Download using dropbox link: https://www.dropbox.com/scl/fi/28i35xxwlozzpnnmsdy2
 
 ## Dependencies
 
+Full example using Anaconda
+
+    conda create -n bioacoustics-task python=3.11
+    conda activate bioacoustics-task
+    pip install -r requirements.txt
+
 ### Scaper
 Scaper does not support python>3.11, so make sure that you are using python=3.11. E.g., 
 
