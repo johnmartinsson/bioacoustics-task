@@ -49,8 +49,8 @@ def main():
             os.makedirs(outfolder)
 
         # SCAPER SETTINGS
-        fg_folder = '{}/sources/{}_sources/foreground/'.format(args.data_dir, split)
-        bg_folder = '{}/sources/{}_sources/background/'.format(args.data_dir, split)
+        fg_folder = '{}/sources/{}_sources/foreground/'.format(args.base_dir, split)
+        bg_folder = '{}/sources/{}_sources/background/'.format(args.base_dir, split)
 
         # the reference dB level of the audio files
         ref_db = -20 # LUFS
