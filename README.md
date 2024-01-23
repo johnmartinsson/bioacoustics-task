@@ -60,6 +60,14 @@ Download using dropbox link: https://www.dropbox.com/scl/fi/28i35xxwlozzpnnmsdy2
   
     unzip bioacoustics-tasks.zip
 
+you should now have the directories
+
+    bioacoustic_sed/generated_datasets/me_1.0_0.25s/   # meerkat dataset
+    bioacoustic_sed/generated_datasets/dog_1.0_0.25s/  # dog dataset
+    bioacoustic_sed/generated_datasets/baby_1.0_0.25s/ # baby dataset
+
+each containing the training and test data. The training and test sources used to generate these datasets are split by geographical location, meaning that sounds from the same recordings and location does not appear in both training and test set.
+
 # Generate own datasets
 
 ## Dependencies
@@ -81,11 +89,24 @@ Dowload the source material: https://www.dropbox.com/scl/fi/ay0w0lb2y2zogjh7779u
 
     unzip bioacoustics-sources.zip
 
+you should now have the directory
+    
+    bioacoustic_sed/sources/train_sources  # the source material for the training data
+    bioacoustic_sed/sources/test_sources   # the source material for the test data
+
+The training and test sources used to generate these datasets are split by geographical location, meaning that sounds from the same recordings and location does not appear in both training and test set.
+
 ## Generate the soundscapes
 
-    python generate_soundscapes.py --dataset_name=$dataset_name --snr=$snr --bg_label=$bg_label --fg_label=$fg_label --n_soundscapes=$n_soundscapes --data_dir=$data_dir
+    python generate_soundscapes.py --dataset_name=all_foreground_and_background_classes --snr=0.0 --bg_label=all --fg_label=all --n_soundscapes=10 --base_dir=bioacoustic_sed/ --out_dir=generated_datasets
 
-Please see the comments and in the generate_soundscape.py file to understand what it does.
+you should now have the directory
+
+    generated_datasets/all_foreground_and_background_classes/
+
+containing the newly generated training and test datasets (each with 10 soundscapes). In this dataset all foreground classes can appear at the same time in the soundscapes, making it a multi-label problem.
+
+Please see the comments and in the generate_soundscape.py file to understand what it does, and what other parameters that can be specified and changed.
 
 ## Generate own source material
 
