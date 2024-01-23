@@ -60,7 +60,26 @@ Download using dropbox link: https://www.dropbox.com/scl/fi/28i35xxwlozzpnnmsdy2
   
     unzip bioacoustics-tasks.zip
 
-## Generate own datasets
+# Generate own datasets
+
+## Dependencies
+
+### Scaper
+Scaper does not support python>3.11, so make sure that you are using python=3.11. E.g., 
+
+    conda create -n bioacoustics-task python=3.11
+
+Anaconda
+    conda install -c conda-forge ffmpeg
+Linux
+    sudo apt-get install ffmpeg
+macOS
+    brew install ffmpeg
+
+
+### Python dependencies
+    pip install requirements.txt
+
 Students can get the source material and the code used to generate the datasets if they want to add more variability, change the SNR, or even generate a multi-label classification task.
 
 Dowload the source material: https://www.dropbox.com/scl/fi/ay0w0lb2y2zogjh7779us/bioacoustics-sources.zip?rlkey=sxm8dpp13473a9ewi6vefw22v&dl=0
