@@ -3,19 +3,35 @@ import scaper
 import numpy as np
 import argparse
 
+def intersection(q1, q2):
+    (a, b) = q1
+    (c, d) = q2
+    if b < c or d < a:
+        return 0
+    else:
+        return np.min([b, d]) - np.max([a, c])
+
+def coverage(q1, q2):
+    """
+        Compute the coverage of q1 by q2. Coverage is defined as the ratio of
+        the intersection of q1 and q2 to the length of q1.
+    """
+    _intersection = intersection(q1, q2)
+    return _intersection / (q1[1]-q1[0])
 
 def has_overlapping_events(annotation_list):
     for (s1, e1, c) in annotation_list:
         for (s2, e2, c) in annotation_list:
             q1 = (s1, e1)
             q2 = (s2, e2)
-            if metrics.coverage(q1, q2) > 0 and metrics.coverage(q1, q2) < 1.0:
+            if coverage(q1, q2) > 0 and coverage(q1, q2) < 1.0:
                 return True
     return False
 
 def main():
     parser = argparse.ArgumentParser(description='A data generation script.')
     parser.add_argument('--data_dir', help='The data dir containing the train and test source directories', required=True, type=str)
+    parser.add_argument('--out_dir', help='The output dir for the generated train and test soundscapes', required=True, type=str)
     parser.add_argument('--dataset_name', help='The name of the generated dataset', required=True, type=str)
     parser.add_argument('--snr', help='The signal-to-noise ratio (in LUFS)', required=True, type=float)
     parser.add_argument('--n_soundscapes', help='The number of soundscapes to generate', required=True, type=int)
@@ -27,7 +43,7 @@ def main():
         print("Generating {} soundscapes ...".format(split))
 
         # OUTPUT FOLDER
-        outfolder = os.path.join(args.data_dir, 'generated_datasets', args.dataset_name, '{}_soundscapes_snr_{}'.format(split, args.snr))
+        outfolder = os.path.join(args.out_dir, args.dataset_name, '{}_soundscapes_snr_{}'.format(split, args.snr))
 
         if not os.path.exists(outfolder):
             os.makedirs(outfolder)
@@ -151,3 +167,6 @@ def main():
 
             # TODO: generate audio from the jams file
             scaper.generate_from_jams(jams_infile = jamsfile, audio_outfile = audiofile)
+
+if __name__ == '__main__':
+    main()
